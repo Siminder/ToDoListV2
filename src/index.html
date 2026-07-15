@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
-
+    <script defer src="todoList.js"></script>
 </head>
 <body>
     <!--Nav Bar-->
     <nav style="border: 2px solid black; width: 200px; height: 850px;">
         <!--Profile area-->
         <h3 class="profile">Profile</h3>
-        <ul>
+        <ul class="ulNav">
             
             <li> <a>view all projects</a> </li>
             <li><a> list 1</a></li>
@@ -21,7 +21,19 @@
         </ul>
     </nav>
     <!--To do list-->
+    <div style="border: 2px solid black; width: 600px; margin: 50px;">
+        <ul id="todoItems" class="todoItems">
+            <li>todo</li>
+            <li>todo</li>
+            <li>todo</li>
+            <li>todo</li>
+        </ul>
 
+        <div class="inputClass">
+            <input type="search" id="todoSearch" name="Search">
+            <input type="submit" id="submit" name="submit" value="submit">
+        </div>
+    </div>
     <!--Details on selected todo-->
 </body>
 </html>

@@ -48,10 +48,13 @@ table {
 }
 
 /* main body styles */
+body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+}
 
 /* Nav bar Styles */
 nav{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: larger;
   display: flex;
   flex-direction: column;
@@ -64,10 +67,39 @@ nav{
   margin-top: 20px;
 }
 
-ul{
+.ulNav{
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
 /* To do list styles */
+.todoItems{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.inputClass{
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  margin-top: 600px;
+}
+
+#todoSearch{
+  width: 500px;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 10px;
+  border: 1px solid rgb(63, 63, 63);
+  margin: 10px;
+}
+
+#submit{
+  height: 45px;
+  margin: 10px;
+  
+}
