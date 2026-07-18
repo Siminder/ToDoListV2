@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./styles.css">
     <script defer src="todoList.js"></script>
 </head>
-<body>
-    <!--Nav Bar-->
-    <nav style="border: 2px solid black; width: 200px; height: 850px;">
+<body >
+    <!--NavBar-->
+    <nav id="navBar"style="border: 2px solid black; width: 200px; height: 900px; max-height: 900px; ">
         <!--Profile area-->
         <h3 class="profile">Profile</h3>
         <ul class="ulNav">
@@ -20,20 +20,31 @@
             <li><a> list 3</a></li>
         </ul>
     </nav>
-    <!--To do list-->
-    <div style="border: 2px solid black; width: 600px; margin: 50px;">
-        <ul id="todoItems" class="todoItems">
-            <li>todo</li>
-            <li>todo</li>
-            <li>todo</li>
-            <li>todo</li>
-        </ul>
-
-        <div class="inputClass">
-            <input type="search" id="todoSearch" name="Search">
-            <input type="submit" id="submit" name="submit" value="submit">
+    <div>
+        <div class="todolist" >
+            <h1>Project Name</h1>
+            <button id="addList" style="background-color: transparent; border: none;">
+                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+            </button>
         </div>
+        <form  onsubmit="" class="form" >
+            <input type="text" id="titleInput" placeholder="Task name">
+            <input type="date" id="dueDate"> 
+            <select id="pirority" name="pirority">
+                <option value="High">High</option>
+                <option value="Med">Med</option>
+                <option value="Low">Low</option>
+            </select>
+            <input type="text" id="description" placeholder="description">
+            <button type="submit" id="submitButton" >submit</button>
+            <button type="button"  id="cancelButton" >cancel</button>
+        </form>
     </div>
-    <!--Details on selected todo-->
+   
+
+         
 </body>
 </html>

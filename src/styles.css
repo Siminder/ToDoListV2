@@ -51,6 +51,18 @@ table {
 body{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   display: flex;
+  overflow-y: hidden;
+   min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #8ec5fc,
+    #8dd3ff,
+    #a1d8ff,
+    #c1d2ff,
+    #e0c3ff
+  );
+  background-size: 200% 200%;
+ 
 }
 
 /* Nav bar Styles */
@@ -74,32 +86,77 @@ nav{
 }
 
 /* To do list styles */
-.todoItems{
-  margin: 20px;
+.todolist{
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  border: 1px solid black;
+  height: 50px;
+  width: 900px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin-left: 300px;
+  margin-top: 10px;
+}
+
+
+/* details styling */
+
+
+
+
+/* form */
+.form{
+  display: none;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 60px);
+  gap: 8px;
+  border: 1px solid black; 
+  width: 500px; 
+  height: 250px;
+  margin-left:600px;
+  margin-top: 100px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
   
 }
 
-.inputClass{
-  display: flex;
-  justify-content: end;
-  align-items: flex-end;
-  margin-top: 600px;
+#titleInput{
+  grid-column: 1 / 3;
+  width: 510px;
+  height: 50px;
 }
 
-#todoSearch{
-  width: 500px;
-  height: 40px;
-  padding: 0 15px;
-  border-radius: 10px;
-  border: 1px solid rgb(63, 63, 63);
-  margin: 10px;
+#dueDate{
+  grid-row-start: 2;
+  width: 250px;
+  height: 50px;
 }
 
-#submit{
-  height: 45px;
-  margin: 10px;
-  
+#pirority{
+  grid-row-start: 2;
+  width: 250px;
+  height: 55px;
+}
+
+#description{
+  grid-column: span 2 / span 2;
+  grid-row-start: 3;
+  width: 510px;
+  height: 50px;
+}
+
+#submitButton{
+  grid-row-start: 4;
+  width: 250px;
+  height: 50px;
+}
+
+#cancelButton{
+  grid-row-start: 4;
+  width: 250px;
+  height: 50px;
 }

@@ -1,19 +1,19 @@
 
 
-//takes input from input bar and makes it into a li element in the selected element
 
-const input = document.querySelector("#todoSearch")
-let submit = document.querySelector("#submit");
-let todoList = document.querySelector("#todoItems")
+let nav = document.querySelector("#navBar")
+let todoDiv = document.querySelector(".todolist");
+let form = document.querySelector(".form");
+let button = document.querySelector("#addList")
 
 
+function openForm(){
+    button.addEventListener("click", () =>{
+        console.log("clicked")
+        nav.style.display = "none";
+        todoDiv.style.display = "none";
+        form.style.display = "grid"
+    })
+}
 
-submit.addEventListener("click", function (e) {
-     if(input){
-       const newli = document.createElement("li");
-       newli.textContent = input.value;
-       todoList.appendChild(newli)
-
-    }
-})
-
+openForm()
