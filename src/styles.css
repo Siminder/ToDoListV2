@@ -90,7 +90,7 @@ nav{
   display: flex;
   border: 1px solid black;
   height: 50px;
-  width: 900px;
+  width: 800px;
   justify-content: space-between;
   align-items: center;
   padding: 5px;
@@ -100,8 +100,24 @@ nav{
 
 
 /* details styling */
+.todo-icon{
+  background-color: transparent;
+  border: none;
+}
+.taskName{
+  margin-right: 300px
+}
 
-
+.ulClass{
+  border: 1px solid black; 
+  width: 600px; 
+  height: 80px; 
+  margin-left: 300px; 
+  margin-top: 10px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+}
 
 
 /* form */
