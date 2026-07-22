@@ -98,6 +98,10 @@ nav{
   margin-top: 10px;
 }
 
+.Priority{
+  margin-right: 15px;
+}
+
 
 /* details styling */
 .todo-icon{
@@ -105,7 +109,10 @@ nav{
   border: none;
 }
 .taskName{
-  margin-right: 300px
+  margin-right: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .ulClass{

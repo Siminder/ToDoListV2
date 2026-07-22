@@ -41,6 +41,8 @@ function todoItem(){
 function createTodoLi(){
     const ul = document.querySelector(".UlforList")
     const createLi = document.createElement("li")
+    const data = grabData();
+   
 
         createLi.classList.add("ulClass")
         createLi.innerHTML = `
@@ -49,8 +51,13 @@ function createTodoLi(){
                             <circle cx="12" cy="12" r="10" class="todo-circle"></circle>  
                         </svg>
                 </button>
-                <h1 class="taskName">task name</h1>
-            
+                <h1 class="taskName">${data.title}
+                <p>${data.description}</p></h1>
+                
+              
+            <svg class="Priority" width="50" height="50" viewBox="0 0 10 10">
+                <circle id="circle" cx="5" cy="5" r="3" fill="#ff0000" />
+            </svg>
             <p class="dueDate">due date</p>
             <button type="button" class="deleteButton" style="background-color: transparent; border: none;">
                 <svg  width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -61,8 +68,11 @@ function createTodoLi(){
             
         
         `
+        
         deleteLi(createLi);
         ul.append(createLi);
+        checkPriority()
+        
         
         
 };
@@ -78,5 +88,46 @@ function deleteLi(createLi) {
    
 }
 
-openForm();
-todoItem();
+
+function grabData(){
+    const title = document.getElementById("titleInput").value
+    const dueDate = document.getElementById("dueDate").value
+    const priorityLevel = document.getElementById("pirority").value
+    const description = document.getElementById("description").value
+    
+    return {
+        title,
+        dueDate,
+        priorityLevel,
+        description
+    }
+    
+}
+
+
+function checkPriority() {
+    const data = grabData();
+    const svg = document.querySelector("#circle")
+
+    switch(data.priorityLevel){
+        case "High": svg.setAttribute('fill', "red");
+            break;
+
+        case "Med": svg.setAttribute('fill', "yellow");
+            break;
+
+        case "Low": svg.setAttribute('fill', "green");
+            break;
+    }
+}
+
+
+function main() {
+    openForm();
+    todoItem();
+    
+}
+
+
+main()
+
